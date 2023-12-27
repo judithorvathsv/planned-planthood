@@ -106,7 +106,17 @@ h1 {
   padding: 3rem 15% 3rem 15%;
 }
 
-#roundSeasonPicDiv {
+#earlierPlanting {
+  display: flex;
+  flex-direction: row-reverse;
+  height: fit-content;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 3rem 15% 3rem 15%;
+}
+
+#roundSeasonPicDiv,
+#roundEarlierPlantingPicDiv {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -114,17 +124,18 @@ h1 {
   width: 50vw;
 }
 
-#seedPackageBackground {
+.packageBackground {
   z-index: 0;
 }
 
-#seedPackagePic {
+.packagePic {
   position: absolute;
   max-width: 20%;
   z-index: 1;
 }
 
-#seasonInfoDiv {
+#seasonInfoDiv,
+#earlierPlantingInfoDiv {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -147,6 +158,10 @@ h3 {
   align-self: flex-end;
 }
 
+#planteradeButton {
+  align-self: flex-start;
+}
+
 #hrDiv {
   display: flex;
   width: 100%;
@@ -161,14 +176,16 @@ hr {
   height: 1.5px;
 }
 
-h2 {
-  font-size: 2rem;
-  text-align: center;
-}
+/*---------- PLANTERING SECTION --------------*/
 
 #planteringSection {
   display: flex;
   flex-direction: column;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
 }
 
 #planteringWrapperDiv {
@@ -265,6 +282,18 @@ h2 {
   display: none;
 }
 
+/*---------FOOTER----------*/
+footer {
+  display: grid;
+  background-image: url("assets/hand.avif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  grid-template-areas: "contactInfo handPicture";
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1.5fr;
+}
+
 /* >>>>>>>>>>>>>>>> MOBILE >>>>>>>>>>>>>>>>>*/
 
 @media only screen and (max-width: 851px) {
@@ -322,37 +351,50 @@ h2 {
     padding: 0;
   }
 
-  #seedPackageBackground {
-    z-index: 0;
+  #earlierPlanting {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    padding: 0;
   }
 
-  #seedPackagePic {
+  .packageBackground {
+    z-index: 0;
+    width: 100%;
+  }
+
+  .packagePic {
     position: absolute;
-    max-width: 35%;
+    max-width: 20%;
     z-index: 1;
   }
 
-  #seasonInfoDiv {
+  #seasonInfoDiv,
+  #earlierPlantingInfoDiv {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
     padding: 0;
     margin: 0 30% 1rem 30%;
-    width: 100%;
+    width: 90%;
   }
 
-  #seasonInfoDiv h3 {
+  #seasonInfoDiv h3,
+  #earlierPlantingInfoDiv h3 {
     padding-bottom: 1rem;
     font-size: 1.5rem;
   }
 
-  #seasonInfoDiv > p {
+  #seasonInfoDiv > p,
+  #earlierPlantingInfoDiv p {
     text-align: center;
     font-size: 1rem;
+    margin: 0 1rem 0 1rem 0;
   }
 
-  #tipsButton {
+  #tipsButton,
+  #planteradeButton {
     align-self: center;
     margin-top: 1rem;
   }
@@ -365,6 +407,7 @@ h2 {
     width: 65%;
   }
 
+  /*---------- PLANTERING SECTION --------------*/
   #planteringSection h2 {
     font-size: 1.5rem;
   }
@@ -379,7 +422,9 @@ h2 {
     grid-template-rows: repeat(3, 60vw);
     padding: 1rem;
     justify-content: space-evenly;
-    row-gap: 5px;
+    row-gap: 15px;
+    margin: 1rem 0 1rem 0;
+    padding: 0;
   }
 
   .plantPic {
@@ -396,11 +441,11 @@ h2 {
   }
 
   .card h4 {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .card > div:nth-of-type(2) > p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     text-align: end;
   }
 
@@ -411,7 +456,7 @@ h2 {
 
   .card > div:nth-of-type(3) > p {
     font-weight: 200;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   .card > div:nth-of-type(3) > button {
@@ -421,5 +466,12 @@ h2 {
   .card > div:nth-of-type(3) > span {
     display: block;
     color: red;
+    font-size: 1.2rem;
   }
+
+  #plantShowMoreButton {
+    margin-bottom: 4rem;
+  }
+
+  /*---------FOOTER----------*/
 }
