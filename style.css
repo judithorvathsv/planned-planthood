@@ -1,0 +1,109 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  display: grid;
+  grid-template-areas:
+    "hand seed"
+    "hand dig"
+    "nav nav";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 3.5rem;
+}
+
+#headerHandDiv {
+  display: flex;
+  flex-wrap: wrap;
+  grid-area: hand;
+  justify-content: center;
+  align-items: center;
+}
+
+#headerSeedDiv {
+  display: flex;
+  flex-wrap: wrap;
+  grid-area: seed;
+  background-image: url("assets/Rectangle\ 20.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+}
+
+#headerDigDiv {
+  display: flex;
+  flex-wrap: wrap;
+  grid-area: dig;
+  background-image: url("assets/Rectangle\ 19.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+}
+
+.middlePic {
+  width: 22rem;
+  height: auto;
+  z-index: 1;
+}
+
+#handPic {
+  z-index: 0;
+  flex-grow: 1;
+}
+
+#logoPic {
+  position: absolute;
+  max-width: 20%;
+}
+
+nav {
+  grid-area: nav;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #0a846e;
+  border-bottom: 1px solid #0a846e;
+}
+
+/* >>>>>>>>>>>>>>>> MOBILE >>>>>>>>>>>>>>>>>*/
+
+@media only screen and (max-width: 851px) {
+  header {
+    display: grid;
+    grid-template-areas:
+      "hand hand"
+      "seed dig";
+    grid-template-columns: repeat(50vw);
+  }
+
+  #headerDigDiv,
+  #headerSeedDiv {
+    height: 50vw;
+  }
+
+  #handPic {
+    z-index: 0;
+    flex-grow: 1;
+    width: 100vw;
+  }
+
+  .middlePic {
+    max-width: 75%;
+    height: auto;
+    z-index: 1;
+  }
+
+  #logoPic {
+    position: absolute;
+    max-width: 50%;
+  }
+
+  nav {
+    display: none;
+  }
+}
