@@ -1,0 +1,157 @@
+header {
+  display: grid;
+  grid-template-areas:
+    "nav"
+    "headerHandDiv";
+}
+
+nav {
+  grid-area: nav;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: var(--green-main-color);
+  font-weight: bold;
+  border-bottom: 1px solid var(--green-main-color);
+  padding: 1.5rem;
+}
+
+#headerHandDiv {
+  grid-area: headerHandDiv;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: url("assets/hand.avif") no-repeat center center/cover;
+  height: 55vh;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+#headerHandDiv > span {
+  display: none;
+}
+
+main {
+  margin: 2rem 5rem 2rem 5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  color: black;
+}
+
+#wrapperNewPlant {
+  display: grid;
+  grid-template-areas: "planta datum";
+  column-gap: 5%;
+  margin-top: 1.2rem;
+}
+
+#wrapperNewPlant div {
+  display: flex;
+  flex-direction: column;
+}
+
+#wrapperNewPlant label {
+  font-size: 1.2rem;
+}
+
+#wrapperNewPlant input {
+  font-size: 2.5rem;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0px 6px 5px 0px rgba(235, 222, 222, 0.75);
+  -webkit-box-shadow: 0px 6px 5px 0px rgba(235, 222, 222, 0.75);
+  -moz-box-shadow: 0px 6px 5px 0px rgba(235, 222, 222, 0.75);
+}
+
+#addButton {
+  margin-top: 2rem;
+  width: fit-content;
+  align-self: flex-start;
+}
+
+h2 {
+  margin-top: 3rem;
+  font-size: 2rem;
+}
+
+.plantWrapperDiv {
+  display: grid;
+  grid-template-areas: "a b c";
+  grid-template-columns: repeat(3, 20vw);
+  grid-template-rows: 28vw;
+  padding: 3rem 0 3rem 0;
+  justify-content: start;
+  column-gap: 5%;
+}
+
+/* >>>>>>>>>>>>>>>> MOBILE >>>>>>>>>>>>>>>>>*/
+@media only screen and (max-width: 851px) {
+  nav {
+    display: none;
+  }
+
+  #headerHandDiv {
+    position: relative;
+  }
+
+  #headerHandDiv > span {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    transform: scale(1.5);
+  }
+
+  h1 {
+    align-self: center;
+    margin-bottom: 1rem;
+  }
+
+  main {
+    margin: 2rem 1rem 2rem 1rem;
+  }
+
+  #wrapperNewPlant {
+    grid-template-areas: "planta" "datum";
+    row-gap: 10px;
+  }
+
+  #wrapperNewPlant input {
+    width: 100%;
+  }
+
+  #addButton {
+    align-self: center;
+  }
+
+  .plantWrapperDiv {
+    display: grid;
+    grid-template-areas: "a b";
+    grid-template-columns: repeat(2, 40vw);
+    grid-template-rows: 50vw;
+    padding: 1rem 0 1rem 0;
+    justify-content: start;
+    column-gap: 5%;
+  }
+
+  /*mobile PLANT SECTIONS */
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .planteringWrapperDiv {
+    display: grid;
+    grid-template-areas: "a b";
+    grid-template-columns: repeat(2, 40%);
+    grid-template-rows: 60vw;
+    padding: 1rem;
+    justify-content: space-evenly;
+    row-gap: 15px;
+    margin: 1rem 0 1rem 0;
+    padding: 0;
+  }
+}

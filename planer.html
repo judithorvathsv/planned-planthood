@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planer</title>
+    <link rel="stylesheet" href="mainStyle.css">
+    <link rel="stylesheet" href="planerStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <span>PLANER</span>
+            <span>HISTORIK</span>
+            <span>TIPS</span>
+            <span><a href="/index.html">LOGGA UT</a></span>
+        </nav>
+
+        <div id="headerHandDiv">
+            <span class="material-symbols-outlined">menu</span>
+            <div>
+                <img src="/assets/Logo.svg" alt="logo picture">
+                <h1>Mina sidor</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <form>
+            <h1>Lägg till ny plantering:</h1>
+            <div id="wrapperNewPlant">
+                <div>
+                    <label>Planta:</label>
+                    <input type="text">
+                </div>
+                <div>
+                    <label>Datum:</label>
+                    <input type="text">
+                </div>
+            </div>
+            <button class="greenButton" id="addButton">LÄGG TILL</button>
+        </form>
+
+        <section>
+            <h2>Dina planerade planteringar:</h2>
+            <div class="plantWrapperDiv">
+
+                <div class="card">
+                    <div>
+                        <img class="plantPic" src="/assets/1.png" alt="picture 1">
+                        <img class="plantIcon" src="/assets/Group 3.svg" alt="plant icon">
+                    </div>
+                    <div>
+                        <h4>Gurka</h4>
+                        <p>15 april 2024</p>
+                    </div>
+                    <div>
+                        <p>Rico Coolio</p>
+                        <button>TA BORT</button>
+                        <span class="material-symbols-outlined">delete</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Dina planterade planteringar:</h2>
+            <div class="plantWrapperDiv">
+
+                <div class="card">
+                    <div>
+                        <img class="plantPic" src="/assets/1.png" alt="picture 1">
+                        <img class="plantIcon" src="/assets/Group 3.svg" alt="plant icon">
+                    </div>
+                    <div>
+                        <h4>Gurka</h4>
+                        <p>15 april 2024</p>
+                    </div>
+                    <div>
+                        <p>Rico Coolio</p>
+                        <button>TA BORT</button>
+                        <span class="material-symbols-outlined">delete</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <img class="plantPic" src="/assets/1.png" alt="picture 1">
+                        <img class="plantIcon" src="/assets/Group 3.svg" alt="plant icon">
+                    </div>
+                    <div>
+                        <h4>Gurka</h4>
+                        <p>15 april 2024</p>
+                    </div>
+                    <div>
+                        <p>Rico Coolio</p>
+                        <button>TA BORT</button>
+                        <span class="material-symbols-outlined">delete</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>
