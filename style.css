@@ -41,11 +41,23 @@ header {
   align-items: center;
 }
 
+#handPic {
+  z-index: 0;
+  flex-grow: 1;
+  min-height: 100%;
+  min-width: 80%;
+}
+
+#logoPic {
+  position: absolute;
+  max-width: 20%;
+}
+
 #headerSeedDiv {
   display: flex;
   flex-wrap: wrap;
   grid-area: seed;
-  background-image: url("assets/Rectangle\ 20.png");
+  background-image: url("assets/Rectangle\ 19.png");
   background-repeat: no-repeat;
   background-size: cover;
   justify-content: center;
@@ -57,7 +69,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   grid-area: dig;
-  background-image: url("assets/Rectangle\ 19.png");
+  background-image: url("assets/Rectangle\ 20.png");
   background-repeat: no-repeat;
   background-size: cover;
   justify-content: center;
@@ -69,16 +81,6 @@ header {
   width: 22rem;
   height: auto;
   z-index: 1;
-}
-
-#handPic {
-  z-index: 0;
-  flex-grow: 1;
-}
-
-#logoPic {
-  position: absolute;
-  max-width: 20%;
 }
 
 nav {
@@ -288,10 +290,70 @@ footer {
   background-image: url("assets/hand.avif");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: 20%;
   color: white;
-  grid-template-areas: "contactInfo handPicture";
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1.5fr;
+  grid-template-areas:
+    "contactInfo handPicture"
+    "toTheTop toTheTop";
+  grid-template-columns: repeat(2, 50vw);
+  grid-template-rows: 100vh 4rem;
+}
+
+#contactInfo {
+  grid-area: contactInfo;
+  background-color: black;
+  opacity: 0.8;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  position: relative;
+}
+
+#contactInfo h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+}
+
+#telefonMailDiv {
+  display: grid;
+  grid-template-areas: "telefon mail";
+  margin: 1rem;
+  font-size: 1.3rem;
+}
+
+#telefonMailDiv > div:nth-of-type(2) {
+  display: flex;
+  justify-self: end;
+  align-items: center;
+}
+
+.contactIcon {
+  transform: scale(1.5);
+  margin: 0.5rem;
+}
+
+#handPicture {
+  grid-area: handPicture;
+  display: flex;
+  justify-content: center;
+}
+
+#handPicture img {
+  width: 20%;
+}
+
+#toTheTop {
+  grid-area: toTheTop;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  font-size: 1.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* >>>>>>>>>>>>>>>> MOBILE >>>>>>>>>>>>>>>>>*/
@@ -325,7 +387,7 @@ footer {
   }
 
   .middlePic {
-    max-width: 75%;
+    max-width: 65%;
     height: auto;
     z-index: 1;
   }
@@ -376,7 +438,7 @@ footer {
     flex-wrap: wrap;
     align-items: center;
     padding: 0;
-    margin: 0 30% 1rem 30%;
+    margin: 1rem 30% 1rem 30%;
     width: 90%;
   }
 
@@ -393,10 +455,15 @@ footer {
     margin: 0 1rem 0 1rem 0;
   }
 
-  #tipsButton,
+  #tipsButton {
+    align-self: center;
+    margin-top: 1rem;
+  }
+
   #planteradeButton {
     align-self: center;
     margin-top: 1rem;
+    margin-bottom: 3rem;
   }
 
   #hrDiv {
@@ -470,8 +537,53 @@ footer {
   }
 
   #plantShowMoreButton {
-    margin-bottom: 4rem;
+    margin: 1.5rem 0 3rem 0;
   }
 
   /*---------FOOTER----------*/
+  footer {
+    display: grid;
+    background-image: url("assets/hand.avif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    color: white;
+    grid-template-areas:
+      "handPicture"
+      "contactInfo"
+      "toTheTop";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 50vh) 4rem;
+  }
+
+  #contactInfo h2 {
+    font-size: 1.8rem;
+  }
+
+  #telefonMailDiv {
+    font-size: 1rem;
+  }
+
+  #telefonMailDiv > div:nth-of-type(1) {
+    display: flex;
+    align-items: center;
+  }
+
+  #telefonMailDiv > div:nth-of-type(2) {
+    display: flex;
+    justify-self: end;
+    align-items: center;
+  }
+
+  .contactIcon {
+    transform: scale(1);
+  }
+
+  #handPicture img {
+    width: 40%;
+  }
+
+  #toTheTop p {
+    font-size: 1.2rem;
+  }
 }
