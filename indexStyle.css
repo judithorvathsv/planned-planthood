@@ -60,15 +60,6 @@ header {
   z-index: 1;
 }
 
-nav {
-  grid-area: nav;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  color: var(--green-main-color);
-  border-bottom: 1px solid var(--green-main-color);
-}
-
 h1 {
   color: var(--green-main-color);
   text-align: center;
